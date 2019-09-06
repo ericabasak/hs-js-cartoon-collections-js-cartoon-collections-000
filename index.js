@@ -1,9 +1,9 @@
 
-
+// dwarves = ["doc", "dopey", "sneezy", "grumpy"]
 function dwarfRollCall(dwarves) {
   var dwarvesArray = [];
   
-  for (let i = 0; i < dwarves.length; i++) {
+  for (let i = dwarves.length / 2; i >= 0; i++) {
     dwarvesArray.push(`${i + 1}. ${dwarves[i]}`)
     }
     return `${dwarvesArray.join(" ")} `;
@@ -51,4 +51,25 @@ function findTheCheese (foods) {
    }
  }
  return "no cheese!";
+}
+
+
+
+
+// wordsWithB([ "apple", "boat", "beans" ]) => return [ "boat", "beans" ] <- start with "b"
+function wordsWithB(arr) {
+  let newArray = [];
+  
+  for( let i = 0; i < arr.length; i++) {
+    let arrayB = arr[i]; // "apple"
+    
+    let newArrayB = arrayB.split(""); // [ "a", "p", "p", "l", "e"]
+    
+    
+    if(newArrayB[0] === "b"){
+      newArray.push(arrayB);
+      
+    }
+  }
+  return newArray;
 }
